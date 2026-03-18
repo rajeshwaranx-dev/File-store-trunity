@@ -88,19 +88,19 @@ SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/{OWNER_TAG}")
 # Define subscription durations and their respective prices:
 # Duration: 7 Days
 # Only change the prices and currency, nothing else.
-PRICE1 = os.environ.get("PRICE1", "₹200")
+PRICE1 = os.environ.get("PRICE1", "₹9")
 
 # Duration: 1 Month
-PRICE2 = os.environ.get("PRICE2", "₹500")
+PRICE2 = os.environ.get("PRICE2", "₹19")
 
 # Duration: 3 Months
-PRICE3 = os.environ.get("PRICE3", "₹800")
+PRICE3 = os.environ.get("PRICE3", "₹49")
 
 # Duration: 6 Months
-PRICE4 = os.environ.get("PRICE4", "₹1500")
+PRICE4 = os.environ.get("PRICE4", "₹99")
 
 # Duration: 1 Year
-PRICE5 = os.environ.get("PRICE5", "₹2850")
+PRICE5 = os.environ.get("PRICE5", "₹149")
 
 
 # Message shown to users when they are required to join a channel or group (force subscription prompt).
