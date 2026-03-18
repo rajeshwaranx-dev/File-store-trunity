@@ -57,7 +57,7 @@ USER_REPLY_TEXT = os.environ.get(
 # Enter your Telegram username (without @). A public username is required to use this bot.
 OWNER_TAG = os.environ.get("OWNER_TAG", "Master_xkid")
 # Time (in seconds) after which messages will be auto-deleted. Use 0 to keep messages permanently.
-TIME = int(os.environ.get("TIME", "600"))
+TIME = int(os.environ.get("TIME", "0"))
 
 # Toggle this feature by setting the value inside to either True (on) or False (off).
 # TRUE for yes FALSE if no
