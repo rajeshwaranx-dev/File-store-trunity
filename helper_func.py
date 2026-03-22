@@ -64,6 +64,7 @@ async def decode(base64_string):
 
 async def get_messages(client, message_ids):
     messages = []
+    message_ids = list(message_ids)  # ← Fix Bug 2: convert range to list
     total_messages = 0
     while total_messages != len(message_ids):
         temb_ids = message_ids[total_messages:total_messages+200]
@@ -78,8 +79,9 @@ async def get_messages(client, message_ids):
                 chat_id=client.db_channel.id,
                 message_ids=temb_ids
             )
-        except:
-            pass
+        except Exception as e:
+            print(f"get_messages error: {e}")  # ← Fix Bug 1: log, don't silently fail
+            msgs = []                           # ← always defined now
         total_messages += len(temb_ids)
         messages.extend(msgs)
     return messages
